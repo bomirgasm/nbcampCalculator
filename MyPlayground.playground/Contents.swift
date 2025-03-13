@@ -20,6 +20,12 @@ class Calculator {
                 return nil
             }
             return firstNumber / secondNumber
+        case "%":
+            if secondNumber == 0 {
+                print("오류: 0으로 나머지 연산을 할 수 없습니다.")
+                return nil
+            }
+            return Double(Int(firstNumber) % Int(secondNumber))
         default:
             print("오류: 지원하지 않는 연산자입니다.")
             return nil
